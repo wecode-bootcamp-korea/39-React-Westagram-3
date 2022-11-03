@@ -20,6 +20,16 @@ const Loginboyoon = () => {
     setPw(event.target.value);
   };
 
+  const valid = id.includes('@') && pw.length >= 5;
+
+  const disabled = valid ? false : true;
+
+  const pressEnter = e => {
+    if (e.code === 'Enter' && disabled === false) {
+      goToMain();
+    }
+  };
+
   return (
     <div className="loginPage">
       <header className="loginPageContent">
@@ -30,15 +40,19 @@ const Loginboyoon = () => {
             className="inputId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            value={id}
             onChange={saveUserId}
+            onKeyUp={pressEnter}
           />
           <input
             className="inputPw"
             type="password"
             placeholder="비밀번호"
+            value={pw}
             onChange={saveUserPw}
+            onKeyUp={pressEnter}
           />
-          <button className="loginBtn" onChange={goToMain} disabled>
+          <button className="loginBtn" onClick={goToMain} disabled={disabled}>
             로그인
           </button>
         </div>
