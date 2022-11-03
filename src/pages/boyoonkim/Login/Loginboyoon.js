@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Loginboyoon.scss';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,6 +7,17 @@ const Loginboyoon = () => {
 
   const goToMain = () => {
     navigate('../main-boyoon');
+  };
+
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+
+  const saveUserId = event => {
+    setId(event.target.value);
+  };
+
+  const saveUserPw = event => {
+    setPw(event.target.value);
   };
 
   return (
@@ -19,9 +30,15 @@ const Loginboyoon = () => {
             className="inputId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            onChange={saveUserId}
           />
-          <input className="inputPw" type="password" placeholder="비밀번호" />
-          <button className="loginBtn" onClick={goToMain} /*disabled*/>
+          <input
+            className="inputPw"
+            type="password"
+            placeholder="비밀번호"
+            onChange={saveUserPw}
+          />
+          <button className="loginBtn" onChange={goToMain} disabled>
             로그인
           </button>
         </div>
