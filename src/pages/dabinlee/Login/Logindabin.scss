@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+/* 최상위 div*/
+
 body {
   display: flex;
   width: 100vw;
@@ -9,74 +11,84 @@ body {
   flex-wrap: nowrap;
   text-align: center;
   background-color: #fafafa;
-}
 
-h1 {
-  font-family: 'Lobster', cursive;
-  font-size: 3rem;
-  margin-top: 0;
-  margin-bottom: 4rem;
-  font-weight: 200;
-}
+  /* 로그인 div */
 
-h3 {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #003668;
-  margin-top: 3rem;
-}
+  .login-container {
+    margin-top: 3rem;
+    border: 0.5px solid #e6e6e6;
+    background-color: white;
+    padding: 3rem 2.5rem 1rem 2.5rem;
 
-.login-container {
-  margin-top: 3rem;
-  border: 0.5px solid #e6e6e6;
-  background-color: white;
-  padding: 3rem 2.5rem 1rem 2.5rem;
-}
+    .instagram-logo {
+      font-family: 'Lobster', cursive;
+      font-size: 3rem;
+      margin-top: 0;
+      margin-bottom: 4rem;
+      font-weight: 200;
+    }
 
-input {
-  outline: none;
-  appearance: unset;
-  justify-items: center;
-  width: 15rem;
-  border: 1px solid #efefef;
-  border-radius: 0.1rem;
-  background-color: #fafafa;
-  padding: 0.5rem;
-}
+    /* 로그인 input form */
 
-input #text {
-  color: #999999;
-  font-size: small;
-}
+    .login-box {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-.login-box {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  gap: 1rem;
-}
+    /* 로그인 ID & PW input */
 
-.button_a {
-  appearance: unset;
-  border: none;
-  border-radius: 0.3rem;
-  background-color: #2962ff;
-  padding: 0.5rem;
-  color: white;
-  opacity: 30%;
-}
+    input {
+      outline: none;
+      appearance: unset;
+      justify-items: center;
+      width: 15rem;
+      border: 1px solid #efefef;
+      border-radius: 0.1rem;
+      background-color: #fafafa;
+      padding: 0.5rem;
+    }
 
-.login-btn {
-  color: white;
-}
+    input #text {
+      color: #999999;
+      font-size: small;
+    }
+  }
 
-.active {
-  appearance: unset;
-  border: none;
-  border-radius: 0.3rem;
-  background-color: #2962ff;
-  padding: 0.5rem;
-  color: white;
-  opacity: 100%;
+  /* 로그인 btn */
+
+  .button_a {
+    appearance: unset;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #2962ff;
+    padding: 0.5rem;
+    color: white;
+    opacity: 30%;
+  }
+
+  .login-btn {
+    color: white;
+  }
+
+  /* 로그인 성공btn */
+
+  .active {
+    appearance: unset;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #2962ff;
+    padding: 0.5rem;
+    color: white;
+    opacity: 100%;
+  }
+
+  .login-failure_help {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #003668;
+    margin: 2rem 0 1rem 0;
+  }
 }
