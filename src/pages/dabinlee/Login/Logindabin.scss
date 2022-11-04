@@ -2,6 +2,23 @@
 
 /* 최상위 div*/
 
+@mixin backgroundColor {
+  background-color: #fafafa;
+}
+
+@mixin loginBtnOn {
+  background-color: #2962ff;
+  color: white;
+}
+
+@mixin loginBtnAtr {
+  appearance: unset;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  color: white;
+}
+
 body {
   display: flex;
   width: 100vw;
@@ -10,10 +27,9 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   text-align: center;
-  background-color: #fafafa;
+  @include backgroundColor;
 
   /* 로그인 div */
-
   .login-container {
     margin-top: 3rem;
     border: 0.5px solid #e6e6e6;
@@ -44,10 +60,10 @@ body {
       appearance: unset;
       justify-items: center;
       width: 15rem;
+      padding: 0.5rem;
       border: 1px solid #efefef;
       border-radius: 0.1rem;
-      background-color: #fafafa;
-      padding: 0.5rem;
+      @include backgroundColor;
     }
 
     input #text {
@@ -58,29 +74,17 @@ body {
 
   /* 로그인 btn */
 
-  .button_a {
-    appearance: unset;
-    border: none;
-    border-radius: 0.3rem;
-    background-color: #2962ff;
-    padding: 0.5rem;
-    color: white;
+  .button_ready {
+    @include loginBtnAtr;
+    @include loginBtnOn;
     opacity: 30%;
   }
 
+  /* 로그인 성공 btn */
+
   .login-btn {
-    color: white;
-  }
-
-  /* 로그인 성공btn */
-
-  .active {
-    appearance: unset;
-    border: none;
-    border-radius: 0.3rem;
-    background-color: #2962ff;
-    padding: 0.5rem;
-    color: white;
+    @include loginBtnAtr;
+    @include loginBtnOn;
     opacity: 100%;
   }
 
@@ -92,3 +96,5 @@ body {
     margin: 2rem 0 1rem 0;
   }
 }
+
+/* E.O.D */

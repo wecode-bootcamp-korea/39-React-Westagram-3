@@ -38,7 +38,7 @@ export default function Login() {
           />
           <button
             // disabled
-            className="button_a login-btn"
+            className="button_ready login-btn"
             onClick={() => {
               console.log('clicked');
             }}
