@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Logindabin.scss';
 
-function loginBtnOn(e) {
-  console.log('clicked the login btn!!!');
-  e.preventDefault();
-  alert('환영합니다!');
-}
-
 export default function Login() {
-  const idValue = null;
+  function loginBtnOn(e) {
+    console.log('clicked the login btn!!!');
+    e.preventDefault();
+    alert('환영합니다!');
+  }
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const saveUserId = event => {
+    setUsername(event.target.value);
+    // console.log(username);
+  };
+  const savePwValue = event => {
+    setPassword(event.target.value);
+    // console.log(password);
+  };
 
   return (
     <div className="body">
@@ -24,17 +35,13 @@ export default function Login() {
             id="id-input"
             type="text"
             placeholder="아이디를 입력해주세요"
-            // onKeyUp={event => {
-            //   idvalue = event.target.value;
-            // }}
+            onChange={saveUserId}
           />
           <input
             type="password"
             id="password-input"
             placeholder="비밀번호"
-            onKeyUp={event => {
-              console.log(event);
-            }}
+            onChange={savePwValue}
           />
           <button
             // disabled
