@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import './Logindabin.scss';
 
 export default function Login() {
-  function loginBtnOn(e) {
-    console.log('clicked the login btn!!!');
-    e.preventDefault();
-    alert('환영합니다!');
-  }
-
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const saveUserId = event => {
     setUsername(event.target.value);
-    // console.log(username);
   };
   const savePwValue = event => {
     setPassword(event.target.value);
-    // console.log(password);
   };
+
+  const isValid = username.indexOf('@') !== -1 && password.length >= 5;
+  // -1은 없다임, @가 없지 않다면 && 비밀번호가 길이가 5자 이상이라면 버튼 온!
+
+  const loginSucess = () => {
+    isValid ? navigate('/main-dabin') : alert('비밀번호를 확인해주세요!');
+    //navigate의 소문자
+  };
+
+  const disable = isValid ? false : true;
 
   return (
     <div className="body">
@@ -44,11 +47,9 @@ export default function Login() {
             onChange={savePwValue}
           />
           <button
-            // disabled
-            className="button_ready login-btn"
-            onClick={() => {
-              console.log('clicked');
-            }}
+            disabled={disable}
+            className={'loginBtn'}
+            onClick={loginSucess}
           >
             로그인하기
           </button>

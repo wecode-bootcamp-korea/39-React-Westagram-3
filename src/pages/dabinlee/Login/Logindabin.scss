@@ -5,12 +5,9 @@
 @mixin backgroundColor {
   background-color: #fafafa;
 }
-@mixin loginBtnOn {
-  background-color: #2962ff;
-  color: white;
-}
 
 @mixin loginBtnAtr {
+  background-color: #2962ff;
   appearance: unset;
   border: none;
   border-radius: 0.3rem;
@@ -73,18 +70,16 @@ body {
 
   /* 로그인 btn */
 
-  .button_ready {
-    @include loginBtnAtr;
-    @include loginBtnOn;
-    opacity: 30%;
-  }
-
   /* 로그인 성공 btn */
 
-  .login-btn {
+  .loginBtn {
     @include loginBtnAtr;
-    @include loginBtnOn;
     opacity: 100%;
+
+    &:disabled {
+      @include loginBtnAtr;
+      opacity: 30%;
+    }
   }
 
   .login-failure_help {
