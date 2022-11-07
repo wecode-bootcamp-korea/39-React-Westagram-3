@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Mainyuju.scss';
 
 function Story({ src, figcaption }) {
@@ -22,6 +22,26 @@ function Recommend({ src, id, friends }) {
 }
 
 function Mainyuju() {
+  const [blue, setBlue] = useState(false); //게시버튼 색바꾸기
+
+  const [input, setInput] = useState('');
+  const [commentArr, setCommentArr] = useState([]);
+
+  function saveComment(event) {
+    setInput(event.target.value);
+  }
+  function commentArray() {
+    setCommentArr([...commentArr, input]);
+  }
+
+  function SingleComment({ content }) {
+    return <div>yuzu_like {content}</div>;
+  }
+
+  function turnBlue() {
+    return input.length > 0 ? setBlue(true) : setBlue(false);
+  }
+
   return (
     <>
       <nav className="navbar">
@@ -82,6 +102,9 @@ function Mainyuju() {
               <ul className="writes">
                 <li className="write" />
               </ul>
+              {commentArr.map(comments => (
+                <SingleComment content={comments} />
+              ))}
             </div>
             <div className="comment">
               <i className="smileface fa-regular fa-face-smile" />
@@ -89,8 +112,15 @@ function Mainyuju() {
                 type="text"
                 className="commentbox"
                 placeholder="댓글 달기..."
+                onKeyUp={turnBlue}
+                onChange={saveComment}
+                value={input}
               />
-              <button className="inputcomment" disable>
+              <button
+                className={blue ? 'aftercomment' : 'beforecomment'}
+                disabled={blue ? false : true}
+                onClick={commentArray}
+              >
                 게시
               </button>
             </div>

@@ -90,6 +90,28 @@ article i {
   border-top: 1px solid #dbdbdb;
   padding: 10px;
   height: 50px;
+
+  button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    transform: translate(200%, -25%);
+  }
+  .beforecomment {
+    color: #c0e0fd;
+  }
+  .aftercomment {
+    color: #0095f6;
+    cursor: pointer;
+  }
+  .commentbox {
+    border: none;
+    width: 300px;
+    transform: translate(-2%, -20%);
+  }
 }
 
 .fa-ellipsis {
@@ -113,11 +135,6 @@ article i {
   color: #8e8e8e;
   margin-top: 5px;
 }
-.commentbox {
-  border: none;
-  width: 300px;
-  transform: translate(-2%, -20%);
-}
 
 .commentbox:focus {
   outline: none;
@@ -132,16 +149,6 @@ article i {
   .sidebar {
     display: none;
   }
-}
-.inputcomment {
-  background: inherit;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 0;
-  overflow: visible;
-  color: #c0dffd;
-  transform: translate(-2%, -25%);
 }
 
 .press:hover {

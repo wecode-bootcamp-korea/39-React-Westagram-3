@@ -9,43 +9,47 @@ h1 {
   font-size: 5em;
 }
 
-main {
+.loginall {
   border: 1px solid #dbdbdb;
   height: 450px;
   width: 350px;
   margin: 30px auto;
-}
-
-input {
-  width: 250px;
-  height: 30px;
-  border-radius: 3px;
-  border: 1px solid #dbdbdb;
-  background-color: #fafafa;
-}
-
-.typeid {
-  text-align: center;
-}
-
-.typepw {
-  text-align: center;
-  margin: 10px 0;
+  .typeid {
+    text-align: center;
+  }
+  .typepw {
+    text-align: center;
+    margin: 10px 0;
+  }
+  input {
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+  }
 }
 
 .login {
   text-align: center;
+  button {
+    width: 256px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 10px 0px;
+    color: white;
+    font-weight: 700;
+  }
 }
 
-button {
-  width: 256px;
-  height: 30px;
+.unactivebtn {
   background-color: #c0dffd;
   border-color: #c0dffd;
-  border-radius: 3px;
-  margin: 10px 0px;
-  color: white;
-  font-weight: 700;
+}
+
+.activebtn {
+  background-color: #0095f6;
+  cursor: pointer;
 }
 
 .forget {
