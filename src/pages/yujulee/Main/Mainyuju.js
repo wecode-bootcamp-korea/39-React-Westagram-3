@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Mainyuju.scss';
 
+//props로 중복코드제거
 function Story({ src, figcaption }) {
   return (
     <div className="story">
@@ -22,8 +23,13 @@ function Recommend({ src, id, friends }) {
 }
 
 function Mainyuju() {
-  const [blue, setBlue] = useState(false); //게시버튼 색바꾸기
+  //게시버튼 색바꾸기
+  const [blue, setBlue] = useState(false);
 
+  function turnBlue() {
+    return input.length > 0 ? setBlue(true) : setBlue(false);
+  }
+  //댓글 구현
   const [input, setInput] = useState('');
   const [commentArr, setCommentArr] = useState([]);
 
@@ -32,14 +38,10 @@ function Mainyuju() {
   }
   function commentArray() {
     setCommentArr([...commentArr, input]);
+    setInput('');
   }
-
   function SingleComment({ content }) {
     return <div>yuzu_like {content}</div>;
-  }
-
-  function turnBlue() {
-    return input.length > 0 ? setBlue(true) : setBlue(false);
   }
 
   return (
@@ -99,11 +101,8 @@ function Mainyuju() {
               <div>좋아요 25개</div>
               <div> yuzu_like 놀러가구싶다!!</div>
               <div className="date">1일 전</div>
-              <ul className="writes">
-                <li className="write" />
-              </ul>
-              {commentArr.map(comments => (
-                <SingleComment content={comments} />
+              {commentArr.map((comments, index) => (
+                <SingleComment key={index} content={comments} />
               ))}
             </div>
             <div className="comment">

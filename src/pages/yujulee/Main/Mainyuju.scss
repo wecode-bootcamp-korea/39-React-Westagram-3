@@ -7,6 +7,7 @@
   border-radius: 5px;
   display: flex;
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 .mainbox {
   width: 450px;
@@ -16,10 +17,7 @@
   border: 1px solid #dbdbdb;
   border-radius: 5px;
 }
-.icons i {
-  font-size: 25px;
-  margin: 20px;
-}
+
 .fa-instagram {
   margin-bottom: 40px;
 }
@@ -28,6 +26,11 @@
   border-right: 1px solid #dbdbdb;
   position: fixed;
   height: 100%;
+  padding-top: 50px;
+  .icons i {
+    font-size: 25px;
+    margin: 20px;
+  }
 }
 
 .storyimg {
@@ -80,7 +83,7 @@
   width: 330px;
   margin-left: 30px;
   margin-right: 50px;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 article i {
   font-size: 25px;
@@ -168,4 +171,7 @@ ul {
 }
 .feedtalk {
   margin: 10px;
+  div {
+    margin-top: 7px;
+  }
 }

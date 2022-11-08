@@ -3,10 +3,11 @@
   src: url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 }
 
-h1 {
+.title {
   font-family: 'Lobster', cursive;
   text-align: center;
-  font-size: 5em;
+  font-size: 4.5em;
+  margin: 25px 0 50px 0;
 }
 
 .loginall {
@@ -16,6 +17,7 @@ h1 {
   margin: 30px auto;
   .typeid {
     text-align: center;
+    margin: 10px 0;
   }
   .typepw {
     text-align: center;
