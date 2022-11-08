@@ -1,7 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Mainboyoon.scss';
+import Footer from '../../../components/Footer/Footer';
 
 function Main() {
+  const [comment, setComment] = useState('');
+  const [commentList, setCommentList] = useState([]);
+
+  const handleComment = event => {
+    setComment(event.target.value); // 댓글 함수에 input 값을 넣어줌
+  };
+  // 추가된 댓글로 배열 만들기
+  const addComment = () => {
+    let arr = [...commentList]; // 원본 데이터를 바꾸지않기 위해 항상 복사본을 만들어서 쓴다!
+    arr.push(comment); // 새로운 배열에 댓글을 push
+    setCommentList(arr); // 해당 배열을 set 배열 함수에 담아줌
+    setComment(''); // 댓글 창을 비워줌
+  };
+
+  // UI에 나타내기
+  const pushComment = (comment, key) => {
+    // props를 이용해서 하나의 컴포넌트를 만든다!
+    return (
+      <li key={key}>
+        <span className="replyId">booooni.k</span>
+        <span>{comment}</span>
+      </li>
+    );
+  };
+
+  const showComment = commentList.map((comment, index) =>
+    pushComment(comment, index)
+  );
+
+  const enterComment = e => {
+    if (e.keyCode === 13) {
+      addComment();
+    }
+  };
+
   return (
     <div className="mainPage">
       <nav className="navBar">
@@ -77,16 +113,17 @@ function Main() {
             </span>
           </div>
 
-          <ul className="article_reply">
-            <li>
-              <span className="replyId">wecode_bootcamp</span>
-              <span>귀여운 웰시코기</span>
-            </li>
-          </ul>
+          <ul className="article_reply">{showComment}</ul>
 
           <div className="article_replyBottom">
-            <input className="article_typingReply" placeholder="댓글 달기..." />
-            <button className="article_replyPush" disabled>
+            <input
+              className="article_typingReply"
+              placeholder="댓글 달기..."
+              value={comment}
+              onChange={handleComment}
+              onKeyUp={enterComment}
+            />
+            <button className="article_replyPush" onClick={addComment}>
               게시
             </button>
           </div>
@@ -253,6 +290,8 @@ function Main() {
               <div className="recommend_follow">팔로우</div>
             </div>
           </div>
+
+          <Footer />
         </div>
       </main>
       <br />
