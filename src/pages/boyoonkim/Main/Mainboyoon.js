@@ -9,6 +9,7 @@ function Main() {
   const handleComment = event => {
     setComment(event.target.value); // 댓글 함수에 input 값을 넣어줌
   };
+
   // 추가된 댓글로 배열 만들기
   const addComment = () => {
     let arr = [...commentList]; // 원본 데이터를 바꾸지않기 위해 항상 복사본을 만들어서 쓴다!
@@ -32,8 +33,13 @@ function Main() {
     pushComment(comment, index)
   );
 
+  // 게시 버튼 비활성화
+  const btnValid = comment.length > 0;
+  const btnDisabled = btnValid ? false : true;
+
+  // 댓글에 1자 이상이고 enter 칠때 댓글 게시
   const enterComment = e => {
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 && btnValid) {
       addComment();
     }
   };
@@ -123,7 +129,11 @@ function Main() {
               onChange={handleComment}
               onKeyUp={enterComment}
             />
-            <button className="article_replyPush" onClick={addComment}>
+            <button
+              className="article_replyPush"
+              onClick={addComment}
+              disabled={btnDisabled}
+            >
               게시
             </button>
           </div>

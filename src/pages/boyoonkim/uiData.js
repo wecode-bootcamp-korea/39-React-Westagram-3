@@ -1,5 +1,5 @@
 export const MENU_LIST = [
-  { id: 1, menuName: '소개' },
+  { id: 1, menuName: '소개', link: 'https://www.google.com/' },
   { id: 2, menuName: '도움말' },
   { id: 3, menuName: '홍보 센터' },
   { id: 4, menuName: 'API' },

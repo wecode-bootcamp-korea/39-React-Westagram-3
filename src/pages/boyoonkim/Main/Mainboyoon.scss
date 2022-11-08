@@ -6,8 +6,6 @@
 }
 
 .mainPage {
-  padding-top: 500px;
-
   /* navBar */
 
   .navBar {
@@ -67,6 +65,7 @@
   .main_feeds {
     @include flex(center, normal);
     flex-direction: row;
+    padding-top: 450px;
 
     .main_article {
       flex-basis: 40%;
@@ -140,8 +139,13 @@
       }
 
       .article_reply {
+        // @media screen and (max-height: 150px) {
+        //   overflow-y: hidden;
+        // }
         list-style-type: none;
         width: 100%;
+        max-height: 130px;
+        overflow-y: scroll;
         border: none;
         border-top: 1px solid $borderGrayColor;
         padding: 7px 0;
@@ -184,6 +188,11 @@
           color: $textBlueColor;
           font-weight: bold;
           border: none;
+
+          &:disabled {
+            opacity: 0.3;
+            cursor: default;
+          }
         }
       }
     }
