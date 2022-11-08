@@ -25,6 +25,7 @@ function Main() {
       <li key={key}>
         <span className="replyId">booooni.k</span>
         <span>{comment}</span>
+        <i className="replyDelete fa-solid fa-trash-can" />
       </li>
     );
   };
