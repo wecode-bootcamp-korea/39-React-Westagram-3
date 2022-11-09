@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // 이다빈의 컴포넌트
 import Logindabin from './pages/dabinlee/Login/Logindabin';
 import Maindabin from './pages/dabinlee/Main/Maindabin';
+import MainNavdabin from './pages/dabinlee/Main/MainNavdabin';
 
 // 이유주의 컴포넌트
 import Loginyuju from './pages/yujulee/Login/Loginyuju';
@@ -30,6 +31,7 @@ const Router = () => {
       <Routes>
         <Route path="/login-dabin" element={<Logindabin />} />
         <Route path="/main-dabin" element={<Maindabin />} />
+        <Route path="/main-navdabin" element={<MainNavdabin />} />
         <Route path="/login-yuju" element={<Loginyuju />} />
         <Route path="/main-yuju" element={<Mainyuju />} />
         <Route path="/login-eunhye" element={<Logineunhye />} />

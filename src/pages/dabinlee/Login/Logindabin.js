@@ -46,11 +46,7 @@ export default function Login() {
             placeholder="비밀번호"
             onChange={savePwValue}
           />
-          <button
-            disabled={disable}
-            className={'loginBtn'}
-            onClick={loginSucess}
-          >
+          <button disabled={disable} className="loginBtn" onClick={loginSucess}>
             로그인하기
           </button>
           <h3 className="login-failure_help">비밀번호를 잊으셨나요?</h3>

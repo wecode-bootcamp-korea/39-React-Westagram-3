@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@mixin backgroudColor {
+  background-color: #fff;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+#topNav {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  height: 7vh;
+  width: 100vw;
+  padding: 0 28rem 0 28rem;
+  justify-items: flex-start;
+  @include backgroudColor();
+  border: 1px solid #dbdbdb;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 0;
+  gap: 2rem;
+
+  input {
+    appearance: unset;
+    height: 1.4rem;
+    width: 13rem;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+  }
+
+  img {
+    height: 1.1rem;
+  }
+
+  .top_nav__icon_right {
+    display: flex;
+    align-items: center;
+  }
+
+  .instagram_logo {
+    font-family: 'Lobster', cursive;
+    display: inline-block;
+  }
+
+  .top_nav__bar {
+    width: 1rem;
+    height: 1rem;
+    color: #000000;
+  }
+
+  .top_nav__icon_left {
+    display: flex;
+    gap: 1.5rem;
+  }
+}

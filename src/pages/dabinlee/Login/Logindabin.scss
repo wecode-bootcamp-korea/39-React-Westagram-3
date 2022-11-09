@@ -77,7 +77,6 @@ body {
     opacity: 100%;
 
     &:disabled {
-      @include loginBtnAtr;
       opacity: 30%;
     }
   }

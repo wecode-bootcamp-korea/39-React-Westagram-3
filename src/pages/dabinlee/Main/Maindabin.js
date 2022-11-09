@@ -1,7 +1,7 @@
 import React from 'react';
+import './MainNavdabin.js';
+import './Maindabin.scss';
 
-function Maindabin() {
-  return <p>Hello world</p>;
-}
+function Maindabin() {}
 
 export default Maindabin;
