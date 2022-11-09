@@ -6,7 +6,7 @@ const Loginboyoon = () => {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate('../main-boyoon');
+    navigate('/main-boyoon');
   };
 
   const [id, setId] = useState('');

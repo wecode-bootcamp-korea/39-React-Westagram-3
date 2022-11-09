@@ -7,7 +7,6 @@
 
 .mainPage {
   /* navBar */
-
   .navBar {
     @include flex(space-around, center);
     position: fixed;
@@ -59,16 +58,15 @@
       width: 50px;
     }
   }
-
   /* main */
 
   .main_feeds {
     @include flex(center, normal);
     flex-direction: row;
-    padding-top: 450px;
+    margin-top: 450px;
 
     .main_article {
-      flex-basis: 40%;
+      width: 40%;
       border: 1px solid $borderGrayColor;
       border-radius: 2px;
       margin-right: 50px;
@@ -139,12 +137,12 @@
       }
 
       .article_reply {
-        // @media screen and (max-height: 150px) {
-        //   overflow-y: hidden;
+        // @media screen and (min-height: 150px) {
+        //   overflow-y: scroll;
         // }
         list-style-type: none;
         width: 100%;
-        max-height: 130px;
+
         overflow-y: scroll;
         border: none;
         border-top: 1px solid $borderGrayColor;
@@ -199,7 +197,7 @@
     /* right */
 
     .main_right {
-      flex-basis: 30%;
+      width: 30%;
 
       .right_info {
         @include flex(flex-start, center);

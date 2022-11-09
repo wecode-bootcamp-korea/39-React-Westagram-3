@@ -20,12 +20,18 @@ function Main() {
 
   // UI에 나타내기
   const pushComment = (comment, key) => {
+    // 댓글 삭제 버튼
+    const delComment = () => {
+      let newArr = [...commentList];
+      newArr.splice(key, 1);
+      setCommentList(newArr);
+    };
     // props를 이용해서 하나의 컴포넌트를 만든다!
     return (
       <li key={key}>
         <span className="replyId">booooni.k</span>
         <span>{comment}</span>
-        <i className="replyDelete fa-solid fa-trash-can" />
+        <i className="replyDelete fa-solid fa-trash-can" onClick={delComment} />
       </li>
     );
   };
@@ -132,7 +138,7 @@ function Main() {
             />
             <button
               className="article_replyPush"
-              onClick={addComment}
+              onClick={comment}
               disabled={btnDisabled}
             >
               게시
