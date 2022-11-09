@@ -1,3 +1,52 @@
 * {
   box-sizing: border-box;
 }
+
+/* variable arrtibute*/
+$bg_white: #fff;
+$Font_Kor: 'Noto Sans KR', sans-serif;
+$Font_Eng: 'Lobster', cursive;
+
+@mixin unsetDefault {
+  appearance: unset;
+  border: none;
+  background-color: transparent;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+/* text default size*/
+
+h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 1.2rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+h4 {
+  margin: 0;
+  font-size: 0.4rem;
+  font-weight: 500;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.4rem;
+  color: rgb(128, 128, 128);
+  font-weight: 400;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #488bff;
+  font-weight: 500;
+}

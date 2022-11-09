@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import '/src/styles/common.scss';
 
 /* 최상위 div*/
 
@@ -7,19 +8,18 @@
 }
 
 @mixin loginBtnAtr {
-  background-color: #2962ff;
-  appearance: unset;
-  border: none;
+  @include unsetDefault;
   border-radius: 0.3rem;
   padding: 0.5rem;
-  color: white;
+  width: 15rem;
+  color: $bg_white;
+  background-color: #2962ff;
 }
 
 body {
-  display: flex;
+  @include flexColumn;
   width: 100vw;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
   text-align: center;
@@ -29,11 +29,11 @@ body {
   .login-container {
     margin-top: 3rem;
     border: 0.5px solid #e6e6e6;
-    background-color: white;
+    background-color: $bg_white;
     padding: 3rem 2.5rem 1rem 2.5rem;
 
     .instagram-logo {
-      font-family: 'Lobster', cursive;
+      font-family: $Font_Eng;
       font-size: 3rem;
       margin-top: 0;
       margin-bottom: 4rem;
@@ -43,9 +43,8 @@ body {
     /* 로그인 input form */
 
     .login-box {
-      display: flex;
+      @include flexColumn;
       flex-wrap: nowrap;
-      flex-direction: column;
       gap: 1rem;
     }
 
@@ -82,11 +81,11 @@ body {
   }
 
   .login-failure_help {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: $Font_Kor;
     font-size: 0.8rem;
     font-weight: 500;
     color: #003668;
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0;
   }
 }
 
