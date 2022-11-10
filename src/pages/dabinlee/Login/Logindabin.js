@@ -21,30 +21,60 @@ export default function Login() {
     isValid ? navigate('/main-dabin') : alert('비밀번호를 확인해주세요!');
   };
 
+  const pressEnter = e => {
+    if (isValid === true && e.keyCode === 13) {
+      //로그인 실습
+      fetch('http://10.58.52.220:3000/auth/signin', {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: username,
+          password: password,
+        }),
+      })
+        .then(response => {
+          if (response.ok === true) {
+            return response.json();
+          }
+          throw new Error('로그인 실패');
+        })
+        .catch(error => alert('로그인 실패'))
+        .then(data => {
+          localStorage.setItem('TOKEN', data.accessToken);
+          alert('로그인 성공');
+          navigate('/main-dabin');
+        });
+    }
+  };
+
   const disable = isValid ? false : true;
 
   return (
     <div className="body">
       <div className="login-container">
         <h1 className="instagram-logo">westagram</h1>
-        <form className="login-box">
+        <div className="login-box">
           <input
             id="id-input"
             type="text"
             placeholder="아이디를 입력해주세요"
             onChange={saveUserId}
+            onKeyDown={pressEnter}
           />
           <input
             type="password"
             id="password-input"
             placeholder="비밀번호"
             onChange={savePwValue}
+            onKeyDown={pressEnter}
           />
           <button disabled={disable} className="loginBtn" onClick={loginSucess}>
             로그인하기
           </button>
           <h3 className="login-failure_help">비밀번호를 잊으셨나요?</h3>
-        </form>
+        </div>
       </div>
     </div>
   );
