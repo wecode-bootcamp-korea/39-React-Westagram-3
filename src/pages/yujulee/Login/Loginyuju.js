@@ -19,8 +19,21 @@ function Loginyuju() {
       : setActive(false);
   }
   const navigate = useNavigate();
-  const goToMain = () => {
-    navigate('/main-yuju');
+
+  const [getData, setGetData] = useState('');
+
+  const loginSuccess = e => {
+    fetch('http://10.58.52.147:3000/auth/signin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({ email: id, password: password }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        setGetData(data);
+        localStorage.setItem('idKey', JSON.stringify(data));
+      });
+    // navigate('/main-yuju');
   };
 
   return (
@@ -48,7 +61,7 @@ function Loginyuju() {
         <button
           className={active ? 'activebtn' : 'unactivebtn'}
           disabled={active ? false : true}
-          onClick={goToMain}
+          onClick={loginSuccess}
         >
           로그인
         </button>
