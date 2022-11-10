@@ -18,21 +18,6 @@ form {
   align-content: center;
   align-items: center;
   color: $bg_white;
-
-  img {
-    width: 1.2rem;
-  }
-
-  input {
-    @include unsetDefault;
-    width: 15rem;
-  }
-
-  .commentBtn {
-    @include unsetDefault;
-    color: cornflowerblue;
-    font-weight: 800;
-  }
 }
 
 /* - - right div - - */
