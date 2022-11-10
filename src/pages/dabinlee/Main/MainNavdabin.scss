@@ -7,18 +7,19 @@
 }
 
 #topNav {
+  padding: 0 14rem;
   position: sticky;
   display: flex;
   flex-direction: row;
   height: 7vh;
   width: 100vw;
   justify-items: flex-start;
-  @include backgroudColor();
+  background-color: #fff;
   border: 1px solid #dbdbdb;
   justify-content: space-evenly;
   align-items: center;
   top: 0;
-  gap: 2rem;
+  @include backgroudColor();
 
   input {
     appearance: unset;

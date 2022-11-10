@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Nav from './MainNavdabin';
 import './Maindabin.scss';
 import ASIDE_LIST from './data';
+import Comment from './Comment.js';
 
 export default function Maindabin() {
   const [coText, setCoText] = useState('');
   const [commentList, setCommentList] = useState([]);
-  const active = coText.length >= 1;
+  const active = coText.length >= 5;
 
   const saveCoText = event => {
     setCoText(event.target.value);
@@ -84,17 +85,7 @@ export default function Maindabin() {
                 <b>0713.jpg</b> 봉로포즈... 🌹 💍
               </h3>
             </section>
-            <div className="commentList">
-              <ul>
-                {commentList.map((comment, index) => (
-                  <li key={index}>
-                    {' '}
-                    <span>0713.jpg </span>
-                    {comment}
-                  </li>
-                ))}
-              </ul>
-            </div>
+
             <div className="comment_container">
               <img src="/images/img.dabinlee/smile.png" />
               <input
