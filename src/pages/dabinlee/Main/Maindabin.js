@@ -17,9 +17,11 @@ export default function Maindabin() {
     const pushedComment = [...commentList, coText];
     setCommentList(pushedComment);
     setCoText('');
+    //input값을 비우기 위함
     //변수를 바꾸려면 함수를 수정합니다
     //리팩토링이 필요함 1
   };
+
   //리팩토링이 필요함 2
   const handleKeyDown = event => {
     if (event.code === 'Enter' && coText.length > 0) {
@@ -170,8 +172,4 @@ export default function Maindabin() {
       </div>
     </>
   );
-}
-
-function Com() {
-  return <></>;
 }
