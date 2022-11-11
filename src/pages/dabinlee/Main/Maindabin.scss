@@ -8,8 +8,14 @@
   padding: 0.5rem;
   font: $Font_Kor;
 }
-body {
+.mainpage {
+  display: flex;
   flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
 }
 
 .friends_story__container {

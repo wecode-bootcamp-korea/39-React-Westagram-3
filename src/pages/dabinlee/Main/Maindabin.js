@@ -16,7 +16,8 @@ export default function Maindabin() {
   const handleClickBtn = () => {
     const pushedComment = [...commentList, coText];
     setCommentList(pushedComment);
-    saveCoText('');
+    setCoText('');
+    //변수를 바꾸려면 함수를 수정합니다
     //리팩토링이 필요함 1
   };
   //리팩토링이 필요함 2
@@ -29,8 +30,7 @@ export default function Maindabin() {
   return (
     <>
       <Nav />
-      <body>
-        {' '}
+      <div className="mainpage">
         <section className="feed-component">
           <section className="friends_story__container">
             <div className="friends_story__individual">
@@ -85,7 +85,13 @@ export default function Maindabin() {
                 <b>0713.jpg</b> 봉로포즈... 🌹 💍
               </h3>
             </section>
-
+            <div className="commentList">
+              <ul>
+                {commentList.map((comment, index) => (
+                  <Comment key={index} contents={comment} />
+                ))}
+              </ul>
+            </div>
             <div className="comment_container">
               <img src="/images/img.dabinlee/smile.png" />
               <input
@@ -161,7 +167,11 @@ export default function Maindabin() {
             })}
           </ul>
         </aside>
-      </body>
+      </div>
     </>
   );
+}
+
+function Com() {
+  return <></>;
 }

@@ -1,18 +1,11 @@
 import React from 'react';
 
-export default function Comment({ commentList }) {
+export default function Comment(props) {
+  const { contents } = props;
   return (
-    <div className="commentList">
-      <ul>
-        {commentList.map((comment, index) => (
-          <li key={index}>
-            {' '}
-            <span>0713.jpg </span>
-            {comment}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <li>
+      <span>0713.jpg </span>
+      {contents}
+    </li>
   );
 }
-//??????????????????????????

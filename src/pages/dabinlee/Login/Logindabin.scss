@@ -16,7 +16,7 @@
   background-color: #2962ff;
 }
 
-body {
+.body {
   @include flexColumn;
   width: 100vw;
   justify-content: center;
