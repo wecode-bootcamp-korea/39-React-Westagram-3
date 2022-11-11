@@ -3,19 +3,6 @@
 
 /* 최상위 div*/
 
-@mixin backgroundColor {
-  background-color: #fafafa;
-}
-
-@mixin loginBtnAtr {
-  @include unsetDefault;
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-  width: 15rem;
-  color: $bg_white;
-  background-color: #2962ff;
-}
-
 .body {
   @include flexColumn;
   width: 100vw;
@@ -51,18 +38,17 @@
     /* 로그인 ID & PW input */
 
     input {
+      @include unsetDefault;
       outline: none;
-      appearance: unset;
       justify-items: center;
       width: 15rem;
       padding: 0.5rem;
       border: 1px solid #efefef;
       border-radius: 0.1rem;
-      @include backgroundColor;
     }
 
     input #text {
-      color: #999999;
+      color: $text-grey;
       font-size: small;
     }
   }
@@ -83,9 +69,8 @@
   .login-failure_help {
     font-family: $Font_Kor;
     font-size: 0.8rem;
-    font-weight: 500;
     color: #003668;
-    margin: 2rem 0;
+    @include font_reset(2rem 0, 500);
   }
 }
 

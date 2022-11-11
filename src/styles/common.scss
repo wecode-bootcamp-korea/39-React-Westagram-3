@@ -6,6 +6,13 @@
 $bg_white: #fff;
 $Font_Kor: 'Noto Sans KR', sans-serif;
 $Font_Eng: 'Lobster', cursive;
+$Btn_blue: #488bff;
+$text-grey: rgb(128, 128, 128);
+
+@mixin font_reset($margin, $font-weight) {
+  margin: $margin;
+  font-weight: $font-weight;
+}
 
 @mixin unsetDefault {
   appearance: unset;
@@ -18,35 +25,44 @@ $Font_Eng: 'Lobster', cursive;
   flex-direction: column;
 }
 
+@mixin backgroundColor {
+  background-color: #fafafa;
+}
+
+@mixin loginBtnAtr {
+  @include unsetDefault;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  width: 15rem;
+  color: $bg_white;
+  background-color: #2962ff;
+}
+
 /* text default size*/
 
 h2 {
-  font-family: 'Lobster', cursive;
+  font-family: $Font_Eng;
   font-size: 1.2rem;
 }
 
 h3 {
-  margin: 0;
+  @include font_reset(0, 800);
   font-size: 0.8rem;
-  font-weight: 800;
 }
 
 h4 {
-  margin: 0;
+  @include font_reset(0, 500);
   font-size: 0.4rem;
-  font-weight: 500;
 }
 
 h5 {
-  margin: 0;
+  @include font_reset(0, 400);
   font-size: 0.4rem;
-  color: rgb(128, 128, 128);
-  font-weight: 400;
+  color: $text-grey;
 }
 
 h6 {
-  margin: 0;
+  @include font_reset(0, 500);
   font-size: 0.7rem;
-  color: #488bff;
-  font-weight: 500;
+  color: $Btn_blue;
 }
