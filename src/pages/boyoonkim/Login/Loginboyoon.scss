@@ -1,59 +1,59 @@
-@import "../../../styles/kimboyoon/mixin.scss";
+@import '../../../styles/kimboyoon/mixin.scss';
 
-body {
-    @include flex (center, center);
+.login {
+  @include flex(center, center);
 
-    text-align: center;
-    height: 100vh;
+  text-align: center;
+  height: 100vh;
 
-    .loginPage {
-        border: 1px solid gray;
-        display: inline-block;
-        padding: 20px 50px;
-        
-        .loginPageContent {
-            padding-bottom: 50px;
-        
-            .logo {
-                font-family: 'Lobster', cursive;
-                font-size: 50px;
-                padding: 50px 50px 70px;
-            }
-            
-            .inputBoxes {
-                display: flex;
-                flex-direction: column;
-            
-                .inputId, .inputPw {
-                    margin-bottom: 20px;
-                    padding: 10px 10px;
-                }
-            
-                .loginBtn {
-                    cursor: pointer;
-                    padding: 10px 0;
-                    background-color: #287aff;
-                    color: white;
-                    border-radius: 7px;
-                    border-style: none;
-                    font-weight: bold;
+  .loginPage {
+    border: 1px solid gray;
+    display: inline-block;
+    padding: 20px 50px;
 
-                    &:disabled{
-                        opacity: 0.3;
-                        cursor: default;
-                    }
-                }
+    .loginPageContent {
+      padding-bottom: 50px;
 
-            }
-            .findPassword {
-                margin-top: 50px;
-                text-align:  center;
-        
-                a {
-                    text-decoration: none;
-                    color: blue;
-                }
-            }
+      .logo {
+        font-family: 'Lobster', cursive;
+        font-size: 50px;
+        padding: 50px 50px 70px;
+      }
+
+      .inputBoxes {
+        display: flex;
+        flex-direction: column;
+
+        .inputId,
+        .inputPw {
+          margin-bottom: 20px;
+          padding: 10px 10px;
         }
+
+        .loginBtn {
+          cursor: pointer;
+          padding: 10px 0;
+          background-color: #287aff;
+          color: white;
+          border-radius: 7px;
+          border-style: none;
+          font-weight: bold;
+
+          &:disabled {
+            opacity: 0.3;
+            cursor: default;
+          }
+        }
+      }
+      .findPassword {
+        margin-top: 50px;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: blue;
+        }
+      }
     }
+  }
 }
