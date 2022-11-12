@@ -1,4 +1,5 @@
 import React from 'react';
+import './Comment.scss';
 
 export default function Comment(props) {
   const { contents } = props;

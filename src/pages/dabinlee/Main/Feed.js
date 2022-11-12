@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Comment from './Comment';
+import './Feed.scss';
 
 const Feed = ({ feedinfo }) => {
   const [coText, setCoText] = useState('');
@@ -46,14 +47,11 @@ const Feed = ({ feedinfo }) => {
             alt="bookmark"
           />
         </section>
-        <section className="feed_container__ctx">
-          <h3 className="feed_container__feed_likes">
-            <b>0713.jpg</b>님외 90명이 좋아합니다
-          </h3>
-          <h3 className="feed__ctx">
-            <b>0713.jpg</b> 봉로포즈... 🌹 💍
-          </h3>
-        </section>
+        <h3 className="feed__ctx">
+          {feedinfo.username}
+          {feedinfo.text}
+        </h3>
+        <section></section>
         <div className="commentList">
           <ul>
             {commentList.map((comment, index) => (

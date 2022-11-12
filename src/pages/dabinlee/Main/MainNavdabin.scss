@@ -2,10 +2,6 @@
 
 @import '/src/styles/common.scss';
 
-@mixin backgroudColor {
-  background-color: #fff;
-}
-
 #topNav {
   z-index: 1;
   display: flex;

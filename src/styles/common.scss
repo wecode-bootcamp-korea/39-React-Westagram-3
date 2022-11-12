@@ -3,11 +3,17 @@
 }
 
 /* variable arrtibute*/
+
 $bg_white: #fff;
 $Font_Kor: 'Noto Sans KR', sans-serif;
 $Font_Eng: 'Lobster', cursive;
 $Btn_blue: #488bff;
 $text-grey: rgb(128, 128, 128);
+$border-set: 1px solid #dbdbdb;
+
+@mixin backgroudColor {
+  background-color: #fff;
+}
 
 @mixin font_reset($margin, $font-weight) {
   margin: $margin;
@@ -47,12 +53,10 @@ h2 {
 
 h3 {
   @include font_reset(0, 800);
-  font-size: 0.8rem;
 }
 
 h4 {
   @include font_reset(0, 500);
-  font-size: 0.4rem;
 }
 
 h5 {
@@ -66,3 +70,5 @@ h6 {
   font-size: 0.7rem;
   color: $Btn_blue;
 }
+
+/* E.O.D */

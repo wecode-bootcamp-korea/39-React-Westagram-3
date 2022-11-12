@@ -23,7 +23,7 @@
   width: 32rem;
   height: 12vh;
   justify-content: space-around;
-  border: 1px solid #9c9c9c;
+  border: $border-set;
   border-radius: 0.5rem;
   align-items: center;
   margin: 2rem 0;
@@ -44,105 +44,6 @@
     display: flex;
     margin-top: 0.4rem;
   }
-}
-
-.feed_container {
-  justify-content: space-around;
-  border: 1px solid $text-grey;
-  border-radius: 0.5rem;
-  align-items: center;
-  width: 32rem;
-  margin-bottom: 3rem;
-
-  .feed_user__information {
-    margin: 0.6rem;
-    display: flex;
-    width: 35vw;
-    height: 3rem;
-    align-items: center;
-
-    .feed_user__pic {
-      width: 3rem;
-      height: 3rem;
-    }
-
-    .feed_user__name {
-      margin-left: 0.5rem;
-      font-size: large;
-      font-weight: 800;
-    }
-  }
-  .feed_img {
-    width: 32rem;
-  }
-}
-
-.feed_container__icons {
-  margin: 0.6rem;
-  display: flex;
-  position: relative;
-  gap: 0.6rem;
-
-  .bookmark_icon {
-    position: absolute;
-    right: 0;
-  }
-  img {
-    width: 1.5rem;
-  }
-}
-
-.feed_container__ctx {
-  margin: 0.6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.4rem;
-}
-
-.comment_container {
-  margin: 0.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  height: 3rem;
-
-  img {
-    width: 2rem;
-  }
-
-  input {
-    @include unsetDefault;
-    width: 25rem;
-  }
-
-  .commentBtn {
-    @include unsetDefault;
-    color: Btn_blue;
-    font-weight: 800;
-  }
-}
-
-.commentList {
-  justify-items: left;
-  height: 3.5rem;
-  overflow: scroll;
-
-  li {
-    display: flex;
-    margin-left: 0.6rem;
-    gap: 0.7rem;
-    font-weight: 600;
-
-    span {
-      font-weight: 900;
-    }
-  }
-}
-
-.comment_container {
-  display: flex;
 }
 
 .right_container {

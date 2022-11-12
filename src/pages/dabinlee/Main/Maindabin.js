@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Nav from './MainNavdabin';
 import './Maindabin.scss';
 import ASIDE_LIST from './data';
-import Comment from './Comment.js';
 import FeedList from './FeedList';
 
 export default function Maindabin() {
