@@ -15,7 +15,6 @@ export default function Login() {
   };
 
   const isValid = username.indexOf('@') !== -1 && password.length >= 5;
-  // -1은 없다임, @가 없지 않다면 && 비밀번호가 길이가 5자 이상이라면 버튼 온!
 
   const loginSucess = () => {
     isValid ? navigate('/main-dabin') : alert('비밀번호를 확인해주세요!');
@@ -23,7 +22,6 @@ export default function Login() {
 
   const pressEnter = e => {
     if (isValid === true && e.keyCode === 13) {
-      //로그인 실습
       fetch('http://10.58.52.220:3000/auth/signin', {
         method: 'post',
         headers: {

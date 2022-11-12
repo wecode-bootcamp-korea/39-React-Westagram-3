@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "username": "choonsik",
+    "feedimg": "/images/img.dabinlee/002.jpg",
+    "profileimg": "/images/img.dabinlee/user04.png",
+    "text": "오늘은 월요일 입니다"
+  },
+  {
+    "id": 2,
+    "username": "BongsikB",
+    "feedimg": "/images/img.dabinlee/003.jpg",
+    "profileimg": "/images/img.dabinlee/user02.png",
+    "text": "주말 언제오나요?"
+  },
+  {
+    "id": 3,
+    "username": "ABCD_DCBA",
+    "feedimg": "/images/img.dabinlee/001.jpg",
+    "profileimg": "/images/img.dabinlee/user03.png",
+    "text": "가을 🍂 🍁"
+  },
+  {
+    "id": 4,
+    "username": "SpongeBob",
+    "feedimg": "/images/img.dabinlee/004.jpg",
+    "feedprofileimgimg": "/images/img.dabinlee/user01.png",
+    "text": "보글보글 🫧 🧼 네모바지"
+  }
+]
