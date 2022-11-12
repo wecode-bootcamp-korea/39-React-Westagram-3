@@ -12,9 +12,10 @@ const Feed = ({ feed }) => {
 
   // 추가된 댓글로 배열 만들기
   const addComment = () => {
-    let arr = [...commentList]; // 원본 데이터를 바꾸지않기 위해 항상 복사본을 만들어서 쓴다!
-    arr.push(comment); // 새로운 배열에 댓글을 push
-    setCommentList(arr); // 해당 배열을 set 배열 함수에 담아줌
+    // let arr = [...commentList]; // 원본 데이터를 바꾸지않기 위해 항상 복사본을 만들어서 쓴다!
+    // arr.push(comment); // 새로운 배열에 댓글을 push
+    // setCommentList(arr); // 해당 배열을 set 배열 함수에 담아줌
+    setCommentList([...commentList, comment]);
     setComment(''); // 댓글 창을 비워줌
   };
 
@@ -42,7 +43,7 @@ const Feed = ({ feed }) => {
 
   // 게시 버튼 비활성화
   const btnValid = comment.length > 0;
-  const btnDisabled = btnValid ? false : true;
+  const btnDisabled = btnValid;
 
   // 댓글에 1자 이상이고 enter 칠때 댓글 게시
   const enterComment = e => {
@@ -105,7 +106,7 @@ const Feed = ({ feed }) => {
         <button
           className="article_replyPush"
           onClick={comment}
-          disabled={btnDisabled}
+          disabled={!btnDisabled}
         >
           게시
         </button>
