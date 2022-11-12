@@ -1,0 +1,341 @@
+@import '../../../styles/kimboyoon/mixin.scss';
+@import '../../../styles/kimboyoon/variables.scss';
+
+* {
+  margin: 0;
+}
+
+.mainPage {
+  /* navBar */
+  .navBar {
+    @include flex(space-around, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid $borderGrayColor;
+    z-index: 1;
+
+    .navBar_logo {
+      @include flex(space-around, center);
+      flex-direction: row;
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
+
+      .fa-instagram {
+        padding: 8px 25px;
+      }
+
+      .navBar_logoInstagram {
+        padding-left: 25px;
+      }
+    }
+
+    .navBar_searchBar {
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 8px;
+        left: 15px;
+        color: gray;
+      }
+
+      .navBar_search {
+        @include img(7px, 250px, 30px);
+        background-color: #f2f2f2;
+        border: none;
+      }
+
+      ::placeholder {
+        text-align: center;
+      }
+    }
+
+    .navBar_icons img {
+      padding-left: 30px;
+      width: 50px;
+    }
+  }
+  /* main */
+
+  .main_feeds {
+    @include flex(center, normal);
+    flex-direction: row;
+    padding-top: 120px;
+    .feeds_article {
+      width: 40%;
+
+      .main_article {
+        border: 1px solid $borderGrayColor;
+        border-radius: 2px;
+        margin-right: 50px;
+
+        .article_navbar {
+          @include flex(space-around, center);
+          flex-direction: row;
+          padding: 8px 0;
+          width: 90%;
+          margin: 0 auto;
+
+          .smallImage {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+          }
+
+          .feedHeader {
+            padding-left: 20px;
+
+            .id {
+              font-weight: bold;
+              font-size: 20px;
+              padding-bottom: 6px;
+            }
+
+            .name {
+              text-align: left;
+            }
+          }
+
+          .fa-ellipsis {
+            margin-left: auto;
+          }
+        }
+
+        .article_img {
+          width: 100%;
+        }
+
+        .article_icons {
+          @include flex(space-between, center);
+          font-size: 20px;
+          padding: 5px;
+          width: 93%;
+
+          i {
+            padding-left: 12px;
+          }
+        }
+
+        .article_content {
+          @include flex(normal, center);
+          padding: 10px;
+
+          .content_Image {
+            @include img(50%, 35px, 35px);
+          }
+
+          .content_likes {
+            padding-left: 12px;
+            font-size: 15px;
+
+            .content_likesName {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .article_reply {
+          list-style-type: none;
+          width: 100%;
+          border: none;
+          border-top: 1px solid $borderGrayColor;
+          padding: 7px 0;
+
+          li {
+            position: relative;
+            padding: 5px 0;
+            text-align: left;
+          }
+
+          .replyId {
+            padding: 20px 20px;
+            font-weight: bold;
+          }
+
+          .replyDelete {
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+          }
+        }
+
+        .article_replyBottom {
+          @include flex(space-around, center);
+          .article_typingReply {
+            width: 80%;
+            border: none;
+            padding: 10px 10px;
+
+            ::placeholder {
+              text-align: left;
+            }
+          }
+
+          .article_replyPush {
+            width: 10%;
+            background-color: white;
+            color: $textBlueColor;
+            font-weight: bold;
+            border: none;
+
+            &:disabled {
+              opacity: 0.3;
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+
+    /* right */
+
+    .main_right {
+      width: 30%;
+
+      .right_info {
+        @include flex(flex-start, center);
+        flex-direction: row;
+        padding: 20px 20px;
+
+        .right_smallImage {
+          @include img(50%, 50px, 50px);
+        }
+
+        .right_IdName {
+          padding-left: 20px;
+
+          .id {
+            font-weight: bold;
+            font-size: 20px;
+          }
+
+          .name {
+            text-align: left;
+          }
+        }
+      }
+
+      .right_storyFriends {
+        @include img(2px, normal, 250px);
+        border: 1px solid $borderGrayColor;
+        border-radius: 2px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .right_nav {
+          @include flex(space-between, normal);
+          width: 90%;
+          margin: 0 auto;
+          font-weight: bold;
+          padding: 10px 0 20px;
+
+          div:nth-child(1) {
+            font-weight: bold;
+            color: $textGrayColor;
+          }
+
+          div:nth-child(2) {
+            color: black;
+          }
+        }
+      }
+
+      .right_story {
+        @include flex(normal, center);
+        padding: 0 0 20px 20px;
+
+        .storyAround {
+          @include flex(center, center);
+          @include img(50%, 50px, 50px);
+          background: linear-gradient(
+            45deg,
+            rgb(255, 230, 0),
+            rgb(255, 0, 128) 80%
+          );
+
+          .storyImg {
+            @include img(50%, 45px, 45px);
+            border: 2.5px solid white;
+          }
+        }
+
+        .story_IdTime {
+          padding-left: 15px;
+
+          div:nth-child(1) {
+            font-weight: bold;
+            color: black;
+            padding-bottom: 6px;
+          }
+
+          div:nth-child(2) {
+            color: $textGrayColor;
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .right_follow {
+      border: 1px solid $borderGrayColor;
+      border-radius: 2px;
+      margin-top: 20px;
+
+      .right_nav {
+        @include flex(space-between, center);
+        width: 90%;
+        margin: 0 auto;
+        font-weight: bold;
+        padding: 10px 0 20px 0;
+
+        div:nth-child(1) {
+          font-weight: bold;
+          color: $textGrayColor;
+        }
+
+        div:nth-child(2) {
+          color: black;
+        }
+      }
+
+      .right_recommend {
+        @include flex(space-between, center);
+        padding: 0 0 20px 20px;
+
+        .recommendImg {
+          @include img(50%, 40px, 40px);
+        }
+
+        .recommend_IdName {
+          flex-grow: 3;
+          padding-left: 15px;
+          text-align: left;
+
+          div:nth-child(1) {
+            font-weight: bold;
+            color: black;
+            padding-bottom: 6px;
+          }
+
+          div:nth-child(2) {
+            color: $textGrayColor;
+          }
+        }
+
+        .recommend_follow {
+          font-weight: bold;
+          color: $textBlueColor;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
