@@ -3,9 +3,10 @@
 
 /* 최상위 div*/
 
-.body {
+.Logindabin {
   @include flexColumn;
   width: 100vw;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
@@ -13,23 +14,21 @@
   @include backgroundColor;
 
   /* 로그인 div */
-  .login-container {
-    margin-top: 3rem;
+  .loginContainer {
     border: 0.5px solid #e6e6e6;
     background-color: $bg_white;
     padding: 3rem 2.5rem 1rem 2.5rem;
 
-    .instagram-logo {
+    .instagramLogo {
       font-family: $Font_Eng;
       font-size: 3rem;
-      margin-top: 0;
       margin-bottom: 4rem;
       font-weight: 200;
     }
 
     /* 로그인 input form */
 
-    .login-box {
+    .loginBox {
       @include flexColumn;
       flex-wrap: nowrap;
       gap: 1rem;
@@ -37,17 +36,14 @@
 
     /* 로그인 ID & PW input */
 
-    input {
-      @include unsetDefault;
-      outline: none;
-      justify-items: center;
+    .idInput,
+    .passwordInput {
       width: 15rem;
+      @include unsetDefault;
+      justify-items: center;
       padding: 0.5rem;
-      border: 1px solid #efefef;
       border-radius: 0.1rem;
-    }
-
-    input #text {
+      border: 1px solid #efefef;
       color: $text-grey;
       font-size: small;
     }
@@ -66,11 +62,11 @@
     }
   }
 
-  .login-failure_help {
+  .loginFailureHelp {
     font-family: $Font_Kor;
+    @include font_reset(2rem 0, 500);
     font-size: 0.8rem;
     color: #003668;
-    @include font_reset(2rem 0, 500);
   }
 }
 
