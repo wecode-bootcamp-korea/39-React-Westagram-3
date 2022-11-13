@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import '/src/styles/common.scss';
+
+/* 최상위 div*/
+
+.Logindabin {
+  @include flexColumn;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  @include backgroundColor;
+
+  /* 로그인 div */
+  .loginContainer {
+    border: 0.5px solid #e6e6e6;
+    background-color: $bg_white;
+    padding: 3rem 2.5rem 1rem 2.5rem;
+
+    .instagramLogo {
+      font-family: $Font_Eng;
+      font-size: 3rem;
+      margin-bottom: 4rem;
+      font-weight: 200;
+    }
+
+    /* 로그인 input form */
+
+    .loginBox {
+      @include flexColumn;
+      flex-wrap: nowrap;
+      gap: 1rem;
+    }
+
+    /* 로그인 ID & PW input */
+
+    .idInput,
+    .passwordInput {
+      width: 15rem;
+      @include unsetDefault;
+      justify-items: center;
+      padding: 0.5rem;
+      border-radius: 0.1rem;
+      border: 1px solid #efefef;
+      color: $text-grey;
+      font-size: small;
+    }
+  }
+
+  /* 로그인 btn */
+
+  /* 로그인 성공 btn */
+
+  .loginBtn {
+    @include loginBtnAtr;
+    opacity: 100%;
+
+    &:disabled {
+      opacity: 30%;
+    }
+  }
+
+  .loginFailureHelp {
+    font-family: $Font_Kor;
+    @include font_reset(2rem 0, 500);
+    font-size: 0.8rem;
+    color: #003668;
+  }
+}
+
+/* E.O.D */

@@ -1,0 +1,53 @@
+@import '/src/styles/common.scss';
+
+.feedContainer {
+  justify-content: space-around;
+  border: $border-set;
+  border-radius: 0.5rem;
+  margin-bottom: 3rem;
+
+  .feedUserInformation {
+    margin: 0.6rem;
+    display: flex;
+    width: 35vw;
+    height: 3rem;
+    align-items: center;
+
+    .feedUserPic {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .feedUserName {
+      margin-left: 0.5rem;
+      font-size: large;
+      font-weight: 800;
+    }
+  }
+  .feedImg {
+    width: 32rem;
+  }
+}
+
+.feedContainerIcons {
+  margin: 0.6rem;
+  display: flex;
+  position: relative;
+  gap: 0.6rem;
+
+  .bookmarkIcon {
+    position: absolute;
+    right: 0;
+  }
+  img {
+    width: 1.5rem;
+  }
+}
+
+.feedCtx {
+  margin: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
