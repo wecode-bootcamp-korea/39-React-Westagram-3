@@ -25,29 +25,29 @@ const Feed = ({ feedinfo }) => {
   };
 
   return (
-    <section className="feed_container">
-      <div className="feed_indivisual">
-        <div className="feed_user__information">
-          <img className="feed_user__pic" src={feedinfo.profileimg} />
-          <h4 className="feed_user__name">{feedinfo.username}</h4>
+    <section className="feedContainer">
+      <div className="feedIndivisual">
+        <div className="feedUserInformation">
+          <img className="feedUserPic" src={feedinfo.profileimg} />
+          <h4 className="feedUserName">{feedinfo.username}</h4>
         </div>
         <img
-          className="feed_img"
+          className="feedImg"
           src={feedinfo.feedimg}
           alt="feed-img"
           width="30rem"
         />
-        <section className="feed_container__icons">
+        <section className="feedContainerIcons">
           <img src="/images/img.dabinlee/heart.PNG" alt="heart" />
           <img src="/images/img.dabinlee/comment.PNG" alt="comment" />
           <img src="/images/img.dabinlee/message.PNG" alt="message" />
           <img
-            className="bookmark_icon"
+            className="bookmarkIcon"
             src="/images/img.dabinlee/bookmark.PNG"
             alt="bookmark"
           />
         </section>
-        <h3 className="feed__ctx">
+        <h3 className="feedCtx">
           {feedinfo.username}
           {feedinfo.text}
         </h3>
@@ -59,7 +59,7 @@ const Feed = ({ feedinfo }) => {
             ))}
           </ul>
         </div>
-        <div className="comment_container">
+        <div className="commentContainer">
           <img src="/images/img.dabinlee/smile.png" />
           <input
             className="commentInput"

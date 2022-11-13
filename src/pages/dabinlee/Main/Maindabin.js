@@ -28,47 +28,58 @@ export default function Maindabin() {
   return (
     <>
       <Nav />
-      <div className="mainpage">
+      <div className="mainPage">
         <section className="feed-component">
-          <section className="friends_story__container">
-            <div className="friends_story__individual">
-              <div className="friends_story__user1_pic"></div>
-              <h4 className="friends_story__user1_name" />
+          <section className="friendsStoryContainer">
+            <div className="friendsStoryIndividual">
+              <div className="friendsStoryUser1Pic"></div>
+              <h4 className="friendsStoryUser1Name" />
               0713.jpg
             </div>
-            <div className="friends_story__individual">
-              <div className="friends_story__user1_pic"></div>
-              <h4 className="friends_story__user1_name" />
+            <div className="friendsStoryIndividual">
+              <div className="friendsStoryUser1Pic"></div>
+              <h4 className="friendsStoryUser1Name" />
               0713.jpg
             </div>
-            <div className="friends_story__individual">
-              <div className="friends_story__user1_pic"></div>
-              <h4 className="friends_story__user1_name" />
+            <div className="friendsStoryIndividual">
+              <div className="friendsStoryUser1Pic"></div>
+              <h4 className="friendsStoryUser1Name" />
               0713.jpg
             </div>
-            <div className="friends_story__individual">
-              <div className="friends_story__user1_pic"></div>
-              <h4 className="friends_story__user1_name" />
+            <div className="friendsStoryIndividual">
+              <div className="friendsStoryUser1Pic"></div>
+              <h4 className="friendsStoryUser1Name" />
               0713.jpg
             </div>
           </section>
           <FeedList />
         </section>
-        <aside className="right_container">
-          <div className="right_container_my_bio">
+        <aside className="rightContainer">
+          <div className="rightContainerMyBio">
             <img src="/images/img.dabinlee/feedimg.jpg" alt="mybiopic" />
             <ul>
-              <li className="right_container_Id">0713.jpg</li>
-              <li className="right_container_name">Dalbong</li>
+              <li className="rightContainerId">0713.jpg</li>
+              <li className="rightContainerName">Dalbong</li>
             </ul>
-            <button className="right_container_switch">전환</button>
+            <button className="rightContainerSwitch">전환</button>
           </div>
-          <div className="right_container_text">
+          <div className="rightContainerText">
             <span>회원님을 위한 추천</span>
             <span>모두 보기</span>
           </div>
-          <section className="right_container_recommendation">
-            <div className="right_container_reco_1">
+          <section className="rightContainerRecommendation">
+            <div className="rightContainerReco1">
+              <img
+                src="/images/img.dabinlee/feedimg.jpg"
+                alt="user recommend"
+              />
+              <ul className="right_container_reco_1_name">
+                <li>0713.jpg</li>
+                <li>Null 님이 팔로우 합니다</li>
+              </ul>
+              <button className="right_container_reco_1_btn">팔로우</button>
+            </div>{' '}
+            <div className="rightContainerReco1">
               <img
                 src="/images/img.dabinlee/feedimg.jpg"
                 alt="user recommend"
@@ -79,18 +90,7 @@ export default function Maindabin() {
               </ul>
               <button className="right_container_reco_1_btn">팔로우</button>
             </div>
-            <div className="right_container_reco_1">
-              <img
-                src="/images/img.dabinlee/feedimg.jpg"
-                alt="user recommend"
-              />
-              <ul className="right_container_reco_1_name">
-                <li>0713.jpg</li>
-                <li>Null 님이 팔로우 합니다</li>
-              </ul>
-              <button className="right_container_reco_1_btn">팔로우</button>
-            </div>
-            <div className="right_container_reco_1">
+            <div className="rightContainerReco1">
               <img
                 src="/images/img.dabinlee/feedimg.jpg"
                 alt="user recommend"
@@ -102,7 +102,7 @@ export default function Maindabin() {
               <button className="right_container_reco_1_btn">팔로우</button>
             </div>
           </section>
-          <ul className="aside_list">
+          <ul className="asideList">
             {ASIDE_LIST.map(el => {
               return <li key={el.id}>{el.text}•</li>;
             })}

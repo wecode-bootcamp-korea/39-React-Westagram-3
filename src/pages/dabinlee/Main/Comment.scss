@@ -1,6 +1,6 @@
 @import '/src/styles/common.scss';
 
-.comment_container {
+.commentContainer {
   margin: 0.6rem;
   display: flex;
   align-items: center;
@@ -35,8 +35,4 @@
       font-weight: 900;
     }
   }
-}
-
-.comment_container {
-  display: flex;
 }

@@ -1,41 +1,41 @@
 @import '/src/styles/common.scss';
 
-.feed_container {
+.feedContainer {
   justify-content: space-around;
   border: $border-set;
   border-radius: 0.5rem;
   margin-bottom: 3rem;
 
-  .feed_user__information {
+  .feedUserInformation {
     margin: 0.6rem;
     display: flex;
     width: 35vw;
     height: 3rem;
     align-items: center;
 
-    .feed_user__pic {
+    .feedUserPic {
       width: 3rem;
       height: 3rem;
     }
 
-    .feed_user__name {
+    .feedUserName {
       margin-left: 0.5rem;
       font-size: large;
       font-weight: 800;
     }
   }
-  .feed_img {
+  .feedImg {
     width: 32rem;
   }
 }
 
-.feed_container__icons {
+.feedContainerIcons {
   margin: 0.6rem;
   display: flex;
   position: relative;
   gap: 0.6rem;
 
-  .bookmark_icon {
+  .bookmarkIcon {
     position: absolute;
     right: 0;
   }
@@ -44,7 +44,7 @@
   }
 }
 
-.feed__ctx {
+.feedCtx {
   margin: 0.6rem;
   display: flex;
   flex-direction: column;

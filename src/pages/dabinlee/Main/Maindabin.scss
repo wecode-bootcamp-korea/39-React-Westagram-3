@@ -9,7 +9,7 @@
   font: $Font_Kor;
 }
 
-.mainpage {
+.mainPage {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -18,7 +18,7 @@
   width: 100vw;
 }
 
-.friends_story__container {
+.friendsStoryContainer {
   display: flex;
   width: 32rem;
   height: 12vh;
@@ -28,25 +28,25 @@
   align-items: center;
   margin: 2rem 0;
 
-  .friends_story__individual {
+  .friendsStoryIndividual {
     height: 6rem;
     width: 4rem;
   }
 
-  .friends_story__user1_pic {
+  .friendsStoryUser1Pic {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
     background-color: #000000;
   }
 
-  h4 {
+  .friendsStoryUser1Name {
     display: flex;
     margin-top: 0.4rem;
   }
 }
 
-.right_container {
+.rightContainer {
   margin-top: 3rem;
   position: sticky;
   display: flex;
@@ -55,7 +55,7 @@
   height: 30rem;
   width: 20rem;
 
-  .right_container_my_bio {
+  .rightContainerMyBio {
     width: 20rem;
     display: flex;
     align-items: center;
@@ -68,13 +68,13 @@
     }
   }
 
-  .right_container_switch {
+  .rightContainerSwitch {
     @include unsetDefault;
     color: #000000;
     font-weight: 700;
   }
 
-  .right_container_text {
+  .rightContainerText {
     display: flex;
     justify-content: space-around;
     width: 20rem;
@@ -82,7 +82,7 @@
     font-weight: 700;
   }
 
-  .right_container_reco_1 {
+  .rightContainerReco1 {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
@@ -107,7 +107,7 @@
     }
   }
 
-  .aside_list {
+  .asideList {
     margin-left: 2rem;
     display: flex;
     flex-wrap: wrap;
